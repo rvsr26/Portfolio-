@@ -239,107 +239,181 @@ body {
 .btn-box:hover {
     box-shadow: 0 0 5px var(--primary-color), 0 0 40px var(--primary-color), 0 0 80px var(--primary-color);
 }
+/* ========================================================= */
+/* ======================= ABOUT =========================== */
+/* ========================================================= */
 
-/* --- ABOUT SECTION (Premium Layout) --- */
 .about {
     background-color: var(--bg-color);
-    display: block; 
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 120px 5% 100px; 
-    position: relative; 
-    overflow: hidden; 
+    padding: 110px 5% 90px;
+    position: relative;
+    overflow: hidden;
 }
 
 .about-text {
+    max-width: 980px;
     margin: 0 auto;
-    padding: 0 40px; 
-    z-index: 2; 
-    position: relative; 
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
 }
 
-/* Heading Styling */
+/* ---------- About Heading ---------- */
 .about-text h2 {
-    font-size: 75px;
-    letter-spacing: 3px; 
+    font-size: clamp(48px, 6vw, 72px);
+    letter-spacing: 2px;
     text-align: center;
-    
-    border-bottom: 5px solid var(--primary-color);
+    margin: 0 auto 50px;
+    padding-bottom: 10px;
     width: fit-content;
-    margin: 0 auto 60px auto; 
-    padding-bottom: 8px; 
+    border-bottom: 4px solid var(--primary-color);
 }
 
 .about-text h2 span {
     color: var(--primary-color);
 }
 
-/* --- Refined Summary Styling (Focusing the accent) --- */
+/* ---------- Role Tagline ---------- */
+.role-tagline {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
 
+/* ---------- Intro Paragraph ---------- */
 .intro-paragraph {
-    font-size: 1.4rem; 
-    font-style: italic; 
-    font-weight: 300; 
-    
-    line-height: 1.6;
-    letter-spacing: 0.5px; 
-    margin-bottom: 40px; 
-    padding: 20px 35px 20px 30px; 
-    
-    color: var(--text-color);
-    text-align: justify; 
-    text-justify: inter-word;
-
-    border-left: 6px solid var(--primary-color); 
-    background-color: rgba(var(--primary-color), 0.05);
-    border-radius: 5px; 
-    transition: box-shadow 0.3s ease;
-}
-
-.conclusion-paragraph {
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
     line-height: 1.7;
-    font-weight: 400; 
-    margin-bottom: 20px;
-    padding: 0 10px; 
+    margin-bottom: 35px;
+    padding: 22px 32px;
     color: var(--text-color);
-    text-align: justify;
+
+    border-left: 5px solid var(--primary-color);
+    background: linear-gradient(
+        90deg,
+        rgba(var(--primary-rgb), 0.08),
+        rgba(var(--primary-rgb), 0.02)
+    );
+
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ensure bold text within the summary stands out more */
-.intro-paragraph strong, .conclusion-paragraph strong {
+.intro-paragraph:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+/* ---------- Highlights ---------- */
+.about-highlights {
+    margin: 35px 0 50px;
+}
+
+.about-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-highlights li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.about-highlights li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* ---------- Technical Focus Card ---------- */
+.technical-focus {
+    margin: 60px 0;
+    padding: 42px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(var(--primary-rgb), 0.4);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technical-focus:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 65px var(--shadow-color);
+}
+
+.technical-focus h3 {
+    font-size: 1.9rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* ---------- Stack Grid ---------- */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.stack-grid div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px 20px;
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.stack-grid div:hover {
+    background: rgba(var(--primary-rgb), 0.08);
+    transform: translateY(-3px);
+}
+
+.stack-grid h4 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+}
+
+.stack-grid p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Conclusion ---------- */
+.conclusion-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    margin-top: 40px;
+    color: var(--text-color);
+}
+
+/* ---------- Strong Accent ---------- */
+.intro-paragraph strong,
+.conclusion-paragraph strong,
+.about-highlights strong {
     color: var(--primary-color);
     font-weight: 700;
 }
 
-
-/* --- TECHNICAL FOCUS BOX STYLING (The High-Contrast Card) --- */
-.technical-focus {
-    background: var(--container-bg); 
-    border: 1px solid var(--primary-color); 
-    border-radius: 15px; 
-    padding: 40px; 
-    margin: 60px 0; 
-    
-    box-shadow: 0 15px 40px var(--shadow-color), 0 0 10px rgba(0, 123, 255, 0.2); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Add a subtle lift animation/effect to the focus box on hover */
-.technical-focus:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 20px 50px var(--shadow-color);
-}
-
-.technical-focus h3 {
-    color: var(--primary-color);
-    font-size: 30px;
-    margin-bottom: 25px;
-    padding-bottom: 12px;
-    border-bottom: 3px solid var(--primary-color);
-}
-
-/* --- SKILLS SECTION --- */
+/* ========================================================= */
+/* ======================= SKILLS ========================== */
+/* ========================================================= */
 
 #Skills {
     background-color: var(--bg-color);
@@ -347,92 +421,113 @@ body {
     color: var(--text-color);
 }
 
+/* ---------- Skills Heading ---------- */
 .subtitle {
     text-align: center;
     font-size: 60px;
-    padding-bottom: 5px; 
-    padding-top: 0; 
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .subtitle span {
     color: var(--primary-color);
 }
 
-/* CRITICAL FIX: The main container for the 5 skill boxes */
+/* ---------- Skills Grid ---------- */
 .sec {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    
     gap: 25px;
-    
-    max-width: 1300px; 
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* The individual skill containers (5 in total in HTML) */
-.container1, .container2, .container3, .container4, .container5 { 
-    padding: 25px; 
-    border-radius: 12px; 
+/* ---------- Skill Containers ---------- */
+.container1,
+.container2,
+.container3,
+.container4,
+.container5 {
+    padding: 25px;
+    border-radius: 12px;
     background: var(--container-bg);
     box-shadow: 0 4px 15px var(--shadow-color);
-    min-height: 0; 
 }
 
+/* ---------- Skill Section Headings ---------- */
 .heading1 {
-    font-size: 1.8rem; 
-    color: var(--primary-color); 
+    font-size: 1.8rem;
+    color: var(--primary-color);
     margin-bottom: 20px;
-    border-bottom: 2px solid var(--primary-color); 
-    padding-bottom: 8px; 
-    text-align: left; 
-    text-decoration: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
 }
 
-/* FIX: Internal Flexbox for continuous, wrapping tag flow */
-.skills-list, .professional-list {
+/* ---------- Skill Lists ---------- */
+.skills-list,
+.professional-list {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 10px 10px; 
-    padding-top: 0; 
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* FIX: Skill Item Tag Style */
+/* ---------- Skill Item ---------- */
 .skill-item {
-    flex: 0 0 auto;
-    font-size: 1rem; 
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
     font-weight: 500;
-    padding: 5px 12px; 
-    
+    padding: 6px 12px;
     background: var(--skill-item-bg);
     color: var(--text-color);
-    
-    border-radius: 5px; 
-    border: 1px solid var(--primary-color); 
-    box-shadow: none; 
-    
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* --- Hover/Icon Styles (Kept Advanced) --- */
-.skill-item:hover {
-    background: var(--primary-color);
-    color: var(--secondary-bg); 
-    transform: translateY(-1px); 
-    box-shadow: 0 0 5px var(--primary-color); 
-    border-color: var(--primary-color); 
-    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
 }
 
 .skill-item i {
-    font-size: 1.1rem; 
-    margin-right: 6px; 
-    transition: transform 0.4s ease;
+    font-size: 1.1rem;
+    margin-right: 6px;
 }
 
-.skill-item:hover i {
-    transform: scale(1.05); 
+/* ---------- Skill Hover ---------- */
+.skill-item:hover {
+    background: var(--primary-color);
+    color: var(--secondary-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px var(--primary-color);
+    cursor: pointer;
+}
+
+/* ========================================================= */
+/* ===================== RESPONSIVE ======================== */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+    .about {
+        padding: 90px 6% 70px;
+    }
+
+    .about-text h2 {
+        font-size: 44px;
+    }
+
+    .intro-paragraph {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    .technical-focus {
+        padding: 28px;
+    }
+
+    .conclusion-paragraph {
+        font-size: 1.05rem;
+    }
+
+    .subtitle {
+        font-size: 42px;
+    }
 }
 
 /* --- PROJECT SECTION (8 Projects - Fixed 4x2 Layout) --- */
