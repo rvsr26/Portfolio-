@@ -1,6 +1,6 @@
 // --- 1. TYPING EFFECT (Typed.js) ---
 var typed = new Typed(".text", {
-    strings: ["Programming" , "Web Development"],
+    strings: ["building scalable web apps" , "backend engineering","solving real-world problems"],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
@@ -72,3 +72,32 @@ function applySavedTheme() {
 
 // Run the theme check immediately on page load
 document.addEventListener('DOMContentLoaded', applySavedTheme);
+
+// --- 4. CONTACT FORM EMAIL (EmailJS) ---
+(function () {
+    emailjs.init("IE4ybiaoMlaR8lgSS"); // 🔴 replace
+})();
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_a9i96t6",   // 🔴 replace
+        "template_3l19m09",  // 🔴 replace
+        this
+    ).then(() => {
+        formStatus.style.display = "block";
+        formStatus.innerHTML = "✅ Message sent successfully!";
+        contactForm.reset();
+
+        setTimeout(() => {
+            formStatus.style.display = "none";
+        }, 4000);
+    }).catch(() => {
+        formStatus.style.display = "block";
+        formStatus.innerHTML = "❌ Message failed. Try again!";
+    });
+});
