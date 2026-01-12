@@ -1,0 +1,1161 @@
+/* --- COLOR VARIABLES (Base - LIGHT Theme Default) --- */
+:root {
+    --primary-color: #007bff; /* Royal Blue Accent */
+    --text-color: #333333; /* Dark Text */
+    --bg-color: #e6f7ff; /* VERY LIGHT AZURE/BLUE Background */
+    --secondary-bg: #ffffff; /* Header/Form Container White */
+    --container-bg: #cceeff; /* Skills/Technical Container Light Blue */
+    --skill-item-bg: #ffffff; /* Skill Box/Input White Background */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Soft Light Shadow */
+}
+
+/* --- DARK MODE VARIABLES (Applied when body has .dark-mode class) --- */
+body.dark-mode {
+    --primary-color: #0ef; /* Cyan/Aqua Accent */
+    --text-color: #ededed;
+    --bg-color: #0d1a26; /* DEEP NAVY BLUE Background */
+    --secondary-bg: #1f2f40; /* Header/Form Container Darker Blue */
+    --container-bg: #293e50; /* Skills/Technical Container Medium Blue */
+    --skill-item-bg: #3c566a; /* Skill Box/Input Background */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Dark Shadow */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* --- NAVBAR --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--secondary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideUP .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+/* --- HOME SECTION --- */
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    align-items: center; 
+    padding: 70px 10% 0; 
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    max-width: 100%; 
+}
+
+/* Home Content Typography & Spacing */
+.home-content h1 {
+    font-size: 68px;
+    font-weight: 800;
+    margin: 5px 0 0 0; 
+    letter-spacing: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    font-size: 38px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h4 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin-bottom: 5px; 
+    text-align: left; 
+}
+
+.home-content h4 span {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h4:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+
+/* --- HOME IMAGE STYLING (Right Column) --- */
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.circular-frame {
+    width: 380px; 
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    /* Pulsating glow border effect - NO ROTATION */
+    border: 7px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color), 
+                0 0 80px rgba(0, 123, 255, 0.5); 
+    
+    animation: pulseGlow 4s infinite alternate; 
+}
+
+.circular-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: scale(1.05); 
+    transition: transform 0.5s;
+}
+
+/* --- Social Icons & Button STYLES --- */
+.home-sci {
+    margin-top: 30px; 
+}
+
+/* SOCIAL ICONS (Animated Fade-in) */
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 15px 0 0;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-bg); 
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* RESUME BUTTON (Animated Fade-in) */
+.btn-box {
+    display: inline-block;
+    padding: 14px 32px; 
+    background: var(--primary-color);
+    border-radius: 40px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--secondary-bg); 
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 30px; 
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px var(--primary-color), 0 0 40px var(--primary-color), 0 0 80px var(--primary-color);
+}
+/* ========================================================= */
+/* ======================= ABOUT =========================== */
+/* ========================================================= */
+
+.about {
+    background-color: var(--bg-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 5% 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-text {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------- About Heading ---------- */
+.about-text h2 {
+    font-size: clamp(48px, 6vw, 72px);
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 auto 50px;
+    padding-bottom: 10px;
+    width: fit-content;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.about-text h2 span {
+    color: var(--primary-color);
+}
+
+/* ---------- Role Tagline ---------- */
+.role-tagline {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* ---------- Intro Paragraph ---------- */
+.intro-paragraph {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    padding: 22px 32px;
+    color: var(--text-color);
+
+    border-left: 5px solid var(--primary-color);
+    background: linear-gradient(
+        90deg,
+        rgba(var(--primary-rgb), 0.08),
+        rgba(var(--primary-rgb), 0.02)
+    );
+
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-paragraph:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+/* ---------- Highlights ---------- */
+.about-highlights {
+    margin: 35px 0 50px;
+}
+
+.about-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-highlights li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.about-highlights li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* ---------- Technical Focus Card ---------- */
+.technical-focus {
+    margin: 60px 0;
+    padding: 42px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(var(--primary-rgb), 0.4);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technical-focus:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 65px var(--shadow-color);
+}
+
+.technical-focus h3 {
+    font-size: 1.9rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* ---------- Stack Grid ---------- */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.stack-grid div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px 20px;
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.stack-grid div:hover {
+    background: rgba(var(--primary-rgb), 0.08);
+    transform: translateY(-3px);
+}
+
+.stack-grid h4 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+}
+
+.stack-grid p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Conclusion ---------- */
+.conclusion-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    margin-top: 40px;
+    color: var(--text-color);
+}
+
+/* ---------- Strong Accent ---------- */
+.intro-paragraph strong,
+.conclusion-paragraph strong,
+.about-highlights strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+/* ========================================================= */
+/* ======================= SKILLS ========================== */
+/* ========================================================= */
+
+#Skills {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+    color: var(--text-color);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: clamp(40px, 5vw, 60px);
+    margin-bottom: 40px;
+}
+
+.subtitle span {
+    color: var(--primary-color);
+}
+
+/* ---------- Skills Grid ---------- */
+.sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* KEY UPDATE: Prevents collapsed categories from stretching to match active ones in the same row */
+    align-items: start; 
+}
+
+/* ========================================================= */
+/* ============== ADVANCED SKILL ACCORDION ================= */
+/* ========================================================= */
+
+.skill-category {
+    position: relative;
+    padding: 25px;
+    border-radius: 14px;
+    background: var(--container-bg);
+    box-shadow: 0 6px 18px var(--shadow-color);
+    cursor: pointer;
+    border: 1px solid transparent;
+    /* Changed to auto to allow the box to grow/shrink based on internal content */
+    height: auto; 
+
+    transition: 
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+        border-color 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-6px) scale(1.025);
+    border-color: var(--primary-color);
+    box-shadow: 
+        0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Header & Arrow ---------- */
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.arrow-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    /* Handles the rotation animation */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Independent Content State ---------- */
+.skills-content {
+    max-height: 0;
+    overflow: hidden;
+    /* Uses max-height for the "Slide" effect */
+    transition: max-height 0.6s cubic-bezier(0, 1, 0, 1);
+}
+
+/* Class toggled independently by JS */
+.skill-category.active .skills-content {
+    max-height: 1000px; 
+    padding-top: 20px;
+    transition: max-height 0.8s cubic-bezier(1, 0, 1, 0);
+}
+
+.skill-category.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Click state visual feedback */
+.skill-category.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================================= */
+/* =================== SKILL PILLS ========================= */
+/* ========================================================= */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    background: var(--skill-item-bg);
+    color: var(--text-color);
+    border-radius: 50px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.25s ease;
+}
+
+.skill-item i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.skill-item:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-4px) rotate(-1.5deg);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* ========================================================= */
+/* =================== RESPONSIVE ========================== */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+    .sec {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-category {
+        padding: 20px;
+    }
+}
+/* --- PROJECT SECTION (8 Projects - Fixed 4x2 Layout) --- */
+#Projects{
+    background-color: var(--bg-color);
+    padding-bottom: 100px;
+}
+.main-text {
+    padding-top: 50px;
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+
+.main-text h2 {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 50px;
+}
+
+.main-text h2 span {
+    color: var(--primary-color);
+}
+
+.serv-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    
+    gap: 35px; 
+    
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    position: relative;
+    border-radius: 15px; 
+    cursor: pointer;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; 
+    
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+    padding: 0;
+}
+
+/* --- Layer and Content Styling (Enhanced Visibility) --- */
+.layer {
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background: linear-gradient(rgba(240, 240, 240, 0.95), var(--primary-color));
+    position: absolute;
+    border-radius: 15px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px; 
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- PROJECT SECTION (Layer Visibility and Scrolling Fix) --- */
+
+.layer p {
+    color: #000; 
+    font-size: 1rem; 
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    
+    max-height: 100px; 
+    overflow-y: auto; 
+    
+    padding: 5px; 
+    margin: 0 0 10px 0; 
+}
+
+/* Optional: Style the scrollbar for aesthetics (Webkit browsers like Chrome/Safari) */
+.layer p::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+.layer p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+}
+
+/* --- Dual Button Link Styling (Enhanced Contrast and Look) --- */
+
+.project-links {
+    margin-top: 25px; 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-link {
+    width: 55px; 
+    height: 55px;
+    background: var(--secondary-bg);
+    border-radius: 50%;
+    transition: all 0.3s ease; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+    border: 2px solid var(--primary-color);
+}
+
+.project-link i {
+    color: var(--primary-color) !important; 
+    font-size: 26px;
+    margin: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--primary-color); 
+    
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--shadow-color), 0 0 20px var(--primary-color); 
+}
+
+.project-link:hover i {
+    color: var(--bg-color) !important;
+}
+
+.row:hover img {
+    transform: scale(1.08); 
+}
+
+.row:hover .layer {
+    height: 100%;
+    opacity: 1;
+}
+
+.row:hover {
+    box-shadow: 0 8px 25px var(--shadow-color);
+    transform: translateY(-5px);
+}
+.view-more-card {
+    text-decoration: none;
+    background: var(--container-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    border: 2px dashed var(--primary-color);
+}
+
+.view-more-content {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.view-more-content i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.view-more-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.view-more-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.view-more-card:hover {
+    background: var(--primary-color);
+    border-style: solid;
+    transform: translateY(-5px);
+}
+
+.view-more-card:hover .view-more-content i,
+.view-more-card:hover .view-more-content h3,
+.view-more-card:hover .view-more-content p {
+    color: white;
+}
+
+.view-more-card:hover .btn-box {
+    background: white;
+    color: var(--primary-color);
+}
+/* --- CONTACTS SECTION (Advanced Form Layout) --- */
+/* --- Contacts Section Wrapper --- */
+.contacts {
+    background-color: var(--bg-color);
+    padding: 100px 10%; 
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 6rem; 
+    align-items: start;
+    border-top: 2px solid var(--secondary-bg);
+}
+
+/* --- Contact Text & Info Column --- */
+.contact-text h2 {
+    font-size: 65px; 
+    text-align: left; 
+    margin-bottom: 25px; 
+    border-bottom: 3px solid var(--primary-color);
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+.contact-text h4 {
+    margin: 20px 0 30px 0; 
+    color: var(--primary-color); 
+    font-size: 24px; 
+    font-weight: 700;
+}
+
+.contact-list {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.1rem; 
+}
+
+.contact-list li {
+    margin-bottom: 20px; 
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.contact-list i {
+    color: var(--primary-color);
+    font-size: 28px; 
+    margin-right: 18px; 
+    padding: 0;
+    transform: translateY(-2px); 
+}
+
+.contact-icons {
+    margin-top: 30px; 
+}
+
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px;
+    background: transparent;
+    border: 3px solid var(--primary-color); 
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0px 15px 0px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-icons i:hover {
+    background: var(--primary-color);
+    color: var(--secondary-bg);
+    box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color);
+}
+
+/* --- Contact Form Styling --- */
+.contact-form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px; 
+    padding: 20px;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+.contact-form .input-box {
+    grid-column: span 1; 
+}
+
+/* Corrected selection for full-width inputs */
+.contact-form .input-box[style*="grid-column: span 2;"] { 
+    grid-column: span 2; 
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 18px; 
+    background: var(--skill-item-bg); 
+    border: 1px solid transparent; 
+    outline: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    resize: none;
+    box-shadow: inset 0 2px 5px var(--shadow-color);
+    transition: all 0.4s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 12px var(--primary-color);
+    background: var(--container-bg); 
+}
+
+.contact-form textarea {
+    height: 180px; 
+}
+
+.contact-form .btn-box {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.contact-form .btn-box button {
+    display: inline-block;
+    padding: 14px 35px; 
+    background: var(--primary-color);
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+    color: var(--secondary-bg);
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+}
+
+.contact-form .btn-box button:hover {
+    box-shadow: 0 0 10px var(--primary-color), 0 0 30px var(--primary-color);
+}
+
+/* --- FOOTER/BACK TO TOP --- */
+
+footer .last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: var(--bg-color);
+    font-weight: 300;
+    margin-top: 0px;
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    left: 1rem;
+    display: flex;
+    opacity: 0;
+    transition: all .4s;
+}
+
+.top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.top i{
+    color: var(--bg-color);
+    background: var(--primary-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.top i:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,0 0 200px cyan;
+}
+
+/* --- ANIMATIONS (All Keyframes) --- */
+
+@keyframes slideLeft { 
+    0% { 
+        transform: translateX(100px); 
+        opacity: 0; 
+    } 
+    100% { 
+        transform: translateX(0px); 
+        opacity: 1; 
+    } 
+}
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 15px var(--primary-color), 0 0 40px rgba(0, 123, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 25px var(--primary-color), 0 0 60px rgba(0, 123, 255, 0.7);
+    }
+}
+
+/* Removed rotateGlow keyframe */
+
+@keyframes animate-path1 { 100% { stroke-dashoffset: 180; } }
+@keyframes animate-path2 { 100% { stroke-dashoffset: 140; } }
+@keyframes animate-path3 { 100% { stroke-dashoffset: 90; } }
+@keyframes animate-path4 { 100% { stroke-dashoffset: 50; } }
+@keyframes animate-bar { 100% { stroke-dashoffset: -1; } }
+@keyframes showText { 100% { opacity: 1; } }
+@keyframes animate { 100% { transform: scaleX(1); } }
+@keyframes slideRight { 0% { transform: translateX(-100px); opacity: 0; } 100% { transform: translateX(0px); opacity: 1; } }
+@keyframes slideTop { 0% { transform: translateY(50px); opacity: 0; } 100% { transform: translateY(0px); opacity: 1; } }
+@keyframes slideBottom { 0% { transform: translateY(-50px); opacity: 0; } 100% { transform: translateY(0px); opacity: 1; } } /* Corrected slideBottom direction */
+@keyframes slideUP { 0% { transform: translateY(50px); opacity: 0; } 100% { transform: translateY(0px); opacity: 1; } }
+
+/* --- MEDIA QUERIES (Enhanced Responsiveness) --- */
+
+@media (max-width: 1250px) {
+    /* Projects drop from 4 to 2 columns */
+    .serv-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    /* General resizing */
+    .header {
+        padding: 20px 5%;
+    }
+    .home {
+        grid-template-columns: 1fr;
+        padding: 70px 5% 0;
+    }
+    .home-content h1 {
+        font-size: 50px;
+    }
+    .home-content h3, .home-content h4 {
+        font-size: 30px;
+    }
+    /* Skills drop from 3 to 2 columns */
+    .sec {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contacts {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Layout Stack */
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .home-content {
+        align-items: center;
+        text-align: center;
+        order: 2; 
+    }
+    .home-image {
+        order: 1; 
+        margin-bottom: 30px;
+    }
+    .serv-container {
+        grid-template-columns: 1fr; /* Projects become single column */
+    }
+    .sec {
+        grid-template-columns: 1fr; /* Skills become single column */
+        gap: 25px;
+    }
+    .about-text {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-text h2 {
+        font-size: 55px;
+    }
+    .intro-paragraph {
+        font-size: 1.2rem;
+    }
+    .contact-form form {
+        grid-template-columns: 1fr;
+    }
+    .contact-form .input-box[style*="grid-column: span 2;"] { 
+        grid-column: span 1 !important; 
+    }
+}
+
+.about, .sec, .services, .contacts {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- INLINE PROJECT PREVIEW FRAME --- */
+.project-preview {
+    grid-column: 1 / -1; /* Spans across all grid columns */
+    background: var(--secondary-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    animation: slideDownFade 0.4s ease forwards;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.project-preview.hidden {
+    display: none;
+}
+
+.preview-content {
+    position: relative;
+}
+
+.preview-content h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.preview-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+.close-preview {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.close-preview:hover {
+    color: var(--primary-color);
+}
+
+.preview-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* --- ACTIVE PROJECT HIGHLIGHT --- */
+.row.active-project {
+    border: 3px solid var(--primary-color);
+    transform: scale(0.95);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+@keyframes slideDownFade {
+    from { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

@@ -1,334 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vishnu Sathwick | Portfolio</title>
-        <link rel="shortcut icon" type="image/png" href="ic.png">
-        <link rel="stylesheet" href='./files/style.css'>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    </head>
-    
-    <body>
-        
-        <header class="header">
-            <a href="#" class="logo">Vishnu Sathwick</a>
-            <nav class="navbar" id="myLinks">
-                <a href="#Home" style="--i:1" class="active" >Home</a>
-                <a href="#About" style="--i:2">About</a>
-                <a href="#Skills" style="--i:3">Skills</a>
-                <a href="#Projects" style="--i:4">Projects</a>
-                <a href="#Contact" style="--i:5">Contact</a>
-            </nav>
-            <i class='bx bx-moon theme-toggle' id="theme-toggle"></i>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Sathwick | Full-Stack Developer Portfolio</title>
 
-        <section class="home" id="Home">
-            <div class="home-content">
-                <h3>Hello, It's Me</h3>
-                <h1>Vishnu Sathwick</h1>
-                <h4 style="--i:6">I'm a Cs student who is<br>
-                    passionate in <span class="text"></span></h4>
-                
-                <div class="home-sci">
-                    <a href="https://www.linkedin.com/in/vishnusathwick26/"style="--i:7" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/vishnusathwick26/"style="--i:8" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://github.com/rvsr26"style="--i:10" target="_blank"><i class='bx bxl-github'></i></a>
-                </div>
-                <a href="files/CB.SC.U4CSE23644.pdf" style="--i:11" class="btn-box" target="_blank">Download Resume</a>
+    <meta name="description" content="Vishnu Sathwick – Computer Science Engineer & Full-Stack Developer specialized in Java, Python, React, and FastAPI.">
+    <meta name="author" content="Vishnu Sathwick">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vishnu Sathwick | Full-Stack Developer">
+    <meta property="og:description" content="Computer Science Engineer building scalable web and mobile solutions.">
+    <meta property="og:image" content="image.png">
+
+    <link rel="shortcut icon" type="image/png" href="ic.png">
+    <link rel="stylesheet" href="./files/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#" class="logo"><span>Vishnu</span>Sathwick</a>
+    <nav class="navbar">
+        <a href="#Home"  style="--i:1">Home</a>
+        <a href="#About" style="--i:2">About</a>
+        <a href="#Skills" style="--i:3">Skills</a>
+        <a href="#Projects" style="--i:4">Projects</a>
+        <a href="#Contact" style="--i:5">Contact</a>
+    </nav>
+    <div class="header-actions">
+        <i class='bx bx-moon theme-toggle' id="theme-toggle" aria-label="Toggle Theme"></i>
+    </div>
+</header>
+
+<main>
+    <section class="home" id="Home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Vishnu <span>Sathwick</span></h1>
+            <h4>I am a <strong>Full-Stack Developer</strong> passionate about <span class="text"></span></h4>
+
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/vishnusathwick26/" target="_blank" aria-label="LinkedIn" style="--i:6"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/vishnusathwick26/" target="_blank" aria-label="Instagram" style="--i:7"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/rvsr26" target="_blank" aria-label="GitHub" style="--i:8"><i class='bx bxl-github'></i></a>
             </div>
 
-            <div class="home-image">
-                <div class="circular-frame">
-                    <img src="image.png" alt="Vishnu Sathwick Portfolio Image"> 
+            <a href="https://drive.google.com/file/d/1zn1pOLKpwR0msC7WsPoOjyPzDxze3sUl/view?usp=sharing" class="btn-box" target="_blank" style="--i:9">Resume <i class='bx bx-export' style="margin-left: 5px; vertical-align: middle;"></i></a>
+        </div>
+
+        <div class="home-image">
+            <div class="circular-frame">
+                <img src="image.png" alt="Vishnu Sathwick Portfolio Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="About">
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <p class="role-tagline">Full-Stack Developer | Computer Science Engineer</p>
+            <p class="intro-paragraph">
+               I am a <strong>Computer Science Engineering</strong> student with strong hands-on experience in Full-Stack Development, focused on building scalable, real-world web applications. I enjoy transforming ideas into reliable software by working across the backend, database, and user interface layers.
+                </p>
+                <p class="intro-paragraph">Also skilled in embedded systems, low-level programming, and real-time hardware
+integration.
+            </p>
+
+
+            <div class="technical-focus">
+                <h3>Technical Focus</h3>
+                <div class="stack-grid">
+                    <div><h4>Backend</h4><p>Java, Python, FastAPI, Node.js</p></div>
+                    <div><h4>Frontend</h4><p>React, JavaScript, HTML, CSS</p></div>
+                    <div><h4>Databases</h4><p>MySQL,Mongo DB, PostgreSQL, Firebase</p></div>
+                    <div><h4>Theory</h4><p>DSA, OS, DBMS, Networks</p></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="About">
-            <div class="about">
-                <div class="about-text">
-                    <h2>About <span>Me</span></h2>
-                    
-                    <p class="intro-paragraph">
-                        I am a <strong>highly driven</strong> Computer Science Engineering student specializing in <strong>Full-Stack Engineering</strong> and deploying <strong>innovative, scalable digital solutions</strong>. My foundation is rooted in <strong>rigorous Computer Science principles</strong>, enabling me to build <strong>robust systems</strong> from the <strong>database layer</strong> to the <strong>front-end interface</strong>.
-                    </p>
+    <section class="skills" id="Skills">
+        <h1 class="subtitle">My <span>Skills</span></h1>
 
-                    <div class="technical-focus">
-                        <h3>Technical Stack & Core Expertise</h3>
-                        <p>
-                            My expertise spans <strong>Backend Architectures</strong> (Java OOP, Python/FastAPI), <strong>Data Management</strong> (MySQL, PostgreSQL, Firebase), and <strong>Web/UI Development</strong> (React, HTML/CSS). I rigorously apply <strong>Core CS principles</strong> (DSA, OS, DBMS) to ensure robust system performance and solve complex engineering challenges.
-                        </p>
-                    </div>
-                    
-                    <p class="conclusion-paragraph">
-                        My objective is to contribute <strong>immediately</strong> to projects that require <strong>technical depth</strong> and <strong>structured, collaborative development practices</strong>. I am actively seeking an <strong>impactful role</strong> where I can continuously learn and apply my <strong>comprehensive development skill set</strong>.
-                    </p>
-                    
+        <div class="sec">
+            <div class="skill-category container1">
+                <div class="category-header">
+                    <h1 class="heading1"><i class='bx bx-code-alt'></i> Programming Languages</h1>
+                    <i class='bx bx-chevron-down arrow-icon'></i>
                 </div>
-            </div>
-        </section>
-
-        <section id="Skills">
-            <h1 class="subtitle">My <span>Skills</span></h1>
-            
-            <div class="sec">
-                <div class="container1">
-                    <h1 class="heading1">Programming Languages</h1>
+                <div class="skills-content">
                     <div class="skills-list">
-                        <div class="skill-item"><i class='bx bxl-java' style="color: #c95d2e;"></i><span>Java</span></div>
-                        <div class="skill-item"><i class='bx bxl-python' style="color: #b0bc1e;"></i><span>Python</span></div>
-                        <div class="skill-item"><i class='bx bxl-c-plus-plus' style="color: #3db2fc;"></i><span>C / C++</span></div>
-                        <div class="skill-item"><i class='bx bx-terminal' style="color: #00ff00;"></i><span>Shell Script</span></div> 
+                        <div class="skill-item"><span>Java</span></div>
+                        <div class="skill-item"><span>Python</span></div>
+                        <div class="skill-item"><span>JavaScript</span></div>
+                        <div class="skill-item"><span>C</span></div>
+                        <div class="skill-item"><span>Shell Scripting</span></div>
+                        <div class="skill-item"><span>Haskell</span></div>
+                        <div class="skill-item"><span>SQL</span></div>
                     </div>
                 </div>
-
-                <div class="container2">
-                    <h1 class="heading1">Core CS & Theory</h1>
-                    <div class="skills-list">
-                        <div class="skill-item"><i class='bx bxs-calculator' style="color: #0ef;"></i><span>Data Structures & Algorithms (DSA)</span></div>
-                        <div class="skill-item"><i class='bx bxs-hdd' style="color: #f7931e;"></i><span>Operating Systems (OS)</span></div>
-                        <div class="skill-item"><i class='bx bxs-data' style="color: #147bbc;"></i><span>Database Management (DBMS)</span></div>
-                        <div class="skill-item"><i class='bx bxs-network-chart' style="color: #c95d2e;"></i><span>Computer Networks (CN)</span></div>
-                        <div class="skill-item"><i class='bx bxs-component' style="color: #ffca28;"></i><span>Computer Org. & Arch. (COA)</span></div>
-                        <div class="skill-item"><i class='bx bxs-objects-vertical-bottom' style="color: #c9332e;"></i><span>Object Oriented Programming (OOP)</span></div>
-                    </div>
-                </div>
-                
-                <div class="container3">
-                    <h1 class="heading1">Web Technologies & Data</h1>
-                    <div class="professional-list">
-                        <div class="skill-item"><i class='bx bxl-react' style="color: #61DAFB;"></i><span>Modern Frontend Dev</span></div>
-                        <div class="skill-item"><i class='bx bxl-html5' style="color: #c9332e;"></i><span>HTML5 / CSS3</span></div>
-                        <div class="skill-item"><i class='bx bxl-nodejs' style="color: #4CAF50;"></i><span>Backend Frameworks (Node/FastAPI)</span></div>
-                        <div class="skill-item"><i class='bx bxs-server' style="color: #5d6174;"></i><span>SQL / NoSQL Databases</span></div>
-                        <div class="skill-item"><i class='bx bxl-firebase' style="color: #ffca28;"></i><span>Cloud Data Platforms (Firebase)</span></div>
-                    </div>
-                </div>
-
-                <div class="container4">
-                    <h1 class="heading1">Machine Learning</h1>
-                    <div class="professional-list">
-                        <div class="skill-item"><i class='bx bxl-python' style="color: #b0bc1e;"></i><span>Machine Learning (ML)</span></div>
-                        <div class="skill-item"><i class='bx bxs-analyse' style="color: #FF9800;"></i><span>Data Analysis & Modeling</span></div>
-                        <div class="skill-item"><i class='bx bxs-bar-chart-alt-2' style="color: #c9332e;"></i><span>Scikit-learn / Pandas</span></div> 
-                        <div class="skill-item"><i class='bx bxs-bar-chart-alt-2' style="color: #147bbc;"></i><span>Regression Models</span></div>
-                    </div>
-                </div>
-
-                <div class="container5">
-                    <h1 class="heading1">Systems & Tools</h1>
-                    <div class="professional-list">
-                        <div class="skill-item"><i class='bx bxl-git' style="color: #f05032;"></i><span>Git / GitHub</span></div>
-                        <div class="skill-item"><i class='bx bxl-visual-studio' style="color: #007ACC;"></i><span>VS Code / Eclipse</span></div> 
-                        <div class="skill-item"><i class='bx bxs-server' style="color: #f7931e;"></i><span>MySQL (Workbench)</span></div>
-                        <div class="skill-item"><i class='bx bxl-python' style="color: #FFC000;"></i><span>Jupyter Notebook</span></div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
-  <section id="Projects">
-    <div id="portfolio" class="services">
-        <div class="main-text" id="serv">
+            <div class="skill-category container2">
+                <div class="category-header">
+                    <h1 class="heading1"><i class='bx bx-globe'></i> Web Technologies & Frameworks</h1>
+                    <i class='bx bx-chevron-down arrow-icon'></i>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-list">
+                        <div class="skill-item"><span>React.js</span></div>
+                        <div class="skill-item"><span>Node.js</span></div>
+                        <div class="skill-item"><span>FastAPI</span></div>
+                        <div class="skill-item"><span>HTML5</span></div>
+                        <div class="skill-item"><span>CSS3</span></div>
+                        <div class="skill-item"><span>Firebase</span></div>
+                        <div class="skill-item"><span>Flutter</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category container3">
+                <div class="category-header">
+                    <h1 class="heading1"><i class='bx bxs-server'></i> Databases</h1>
+                    <i class='bx bx-chevron-down arrow-icon'></i>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-list">
+                        <div class="skill-item"><span>MySQL</span></div>
+                        <div class="skill-item"><span>PostgreSQL</span></div>
+                        <div class="skill-item"><span>SQL / NoSQL</span></div>
+                        <div class="skill-item"><span>Firebase Firestore</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category container4">
+                <div class="category-header">
+                    <h1 class="heading1"><i class='bx bx-book-bookmark'></i> Core Computer Science</h1>
+                    <i class='bx bx-chevron-down arrow-icon'></i>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-list">
+                        <div class="skill-item"><span>Data Structures (DSA)</span></div>
+                        <div class="skill-item"><span>Operating Systems</span></div>
+                        <div class="skill-item"><span>DBMS Theory</span></div>
+                        <div class="skill-item"><span>Networking (CN)</span></div>
+                        <div class="skill-item"><span>OOP Design</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category container5">
+                <div class="category-header">
+                    <h1 class="heading1"><i class='bx bx-brain'></i> Machine Learning</h1>
+                    <i class='bx bx-chevron-down arrow-icon'></i>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-list">
+                        <div class="skill-item"><span>Data Modeling</span></div>
+                        <div class="skill-item"><span>Scikit-learn</span></div>
+                        <div class="skill-item"><span>Pandas & NumPy</span></div>
+                        <div class="skill-item"><span>Feature Engineering</span></div>
+                        <div class="skill-item"><span>Model Evaluation</span></div>
+                        <div class="skill-item"><span>Data Preprocessing</span></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category container6">
+                <div class="category-header">
+                    <h1 class="heading1"><i class='bx bx-wrench'></i> Systems & Tools</h1>
+                    <i class='bx bx-chevron-down arrow-icon'></i>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-list">
+                        <div class="skill-item"><span>Git & GitHub</span></div>
+                        <div class="skill-item"><span>VS Code</span></div>
+                        <div class="skill-item"><span>Linux / CLI</span></div>
+                        <div class="skill-item"><span>Jupyter</span></div>
+                        <div class="skill-item"><span>Cisco Packet Tracer</span></div>
+                        <div class="skill-item"><span>Eclipse / CLI</span></div>
+                        <div class="skill-item"><span>Wireshark</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="projects" id="Projects">
+    <div class="services">
+        <div class="main-text">
             <h2>My <span>Projects</span></h2>
-            <div class="serv-container">
+        </div>
 
-                <div class="row">
-                    <img src="./img/foodheaven.png" alt="Apex Kitchen Web Application">
-                    <div class="layer">
-                        <h5>Apex Kitchen</h5>
-                        <p>Apex Kitchen is a professional, Firebase-backed web application facilitating real-time multi-cuisine ordering with comprehensive admin-side management and superior user flow.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/Restaurent-menu" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="https://pizzaheavenmenu.netlify.app" class="project-link live" target="_blank" title="Live Demo">
-                                <i class='bx bx-link-external'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <img src="./img/fureverhome.png" alt="FurEver Home Pet Welfare App">
-                    <div class="layer">
-                        <h5>FurEver Home</h5>
-                        <p>FurEver Home is a comprehensive pet welfare app featuring a real-time social feed, educational content, donation links, and a Gemini-powered AI assistant.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/FUREVERHOME-FLUTTER" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="https://flutever.netlify.app/" class="project-link live" target="_blank" title="Live Demo">
-                                <i class='bx bx-link-external'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <img src="./img/onestore.png" alt="OneStore E-commerce Platform">
-                    <div class="layer">
-                        <h5>OneStore</h5>
-                        <p>OneStore is an intelligent, full-featured e-commerce platform built with Flutter, providing AI shopping assistance and a seamless, dynamic user experience.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/OneStore" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="https://one-store-green.vercel.app/" class="project-link live" target="_blank" title="Live Demo">
-                                <i class='bx bx-link-external'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <img src="./img/studenttracker.png" alt="Student Tracker Dashboard">
-                    <div class="layer">
-                        <h5>Student Tracker</h5>
-                        <p>Student Tracker Ultra is a gamified, real-time academic dashboard powered by React and Firebase that helps students organize tasks, track grades, and boost motivation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/Student-Tracker" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="https://studenttrackerap.netlify.app/" class="project-link live" target="_blank" title="Live Demo">
-                                <i class='bx bx-link-external'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="serv-container">
+            <div class="row project-card" 
+                data-title="Food Heaven" 
+                data-desc="A production-ready multi-cuisine ordering system. Features real-time Firebase Firestore synchronization, an Admin dashboard for menu management, and automated checkout billing." 
+                data-image="./img/foodheaven.png"
+                data-live="https://pizzaheavenmenu.netlify.app" 
+                data-github="https://github.com/rvsr26/FoodHeaven-FullStack-Menu"
+                data-tools="Html, Firebase, JavaScript, Css">
                 
-                <div class="row">
-                    <img src="./img/drs.png" alt="Defence Radar Embedded System">
-                    <div class="layer">
-                        <h5>Defence Radar System</h5>
-                        <p>This is an <strong>embedded project</strong> using an <strong>STM32 microcontroller</strong> and <strong>bare-metal C</strong> to simulate a real-time radar, plotting ultrasonic object detection and tracking on an OLED display.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/Defence-Radar-System" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="[LINK_TO_VIDEO_DEMO_5]" class="project-link live" target="_blank" title="Video Demo">
-                                <i class='bx bxl-youtube'></i>
-                            </a>
-                        </div>
+                <div class="layer">
+                    <h5>Food Heaven</h5>
+                    <div class="project-languages">
+                        <span>Html</span> <span>JavaScript</span> 
                     </div>
-                </div>
-
-                <div class="row">
-                    <img src="./img/imagepr.png" alt="PixelForge Image Processing Tool">
-                    <div class="layer">
-                        <h5>PixelForge</h5>
-                        <p>PixelForge is a powerful Python-based command-line tool for advanced image processing, leveraging <strong>OOP principles</strong>, <strong>NumPy/SciPy</strong> for efficient filtering, and a <strong>Stack-based undo system</strong>.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/Image-Processing" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="[LINK_TO_LIVE_DEMO_6]" class="project-link live" target="_blank" title="Run on Colab">
-                                <i class='bx bxl-codepen'></i>
-                            </a>
-                        </div>
+                    <div class="project-languages">
+                        <span>CSS</span> <span>Firebase</span>
                     </div>
+                    
+                    <p>Click for full details</p>
                 </div>
-
-                <div class="row">
-                    <img src="./img/log.png" alt="Paralog Analytics Engine">
-                    <div class="layer">
-                        <h5>Paralog Analytics</h5>
-                        <p>Paralog Analytics is a <strong>high-performance, Python-based log analysis engine</strong> that uses the <strong>MapReduce pattern</strong> and the <strong>multiprocessing library</strong> to process large log volumes in parallel across all CPU cores.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/rvsr26/LogSplitter" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="[LINK_TO_DEMO_VIDEO_7]" class="project-link live" target="_blank" title="Video Demo">
-                                <i class='bx bxl-youtube'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <img src="./img/c_cpp_algo.jpg" alt="C++ Algorithm Visualization">
-                    <div class="layer">
-                        <h5>Sorting Algorithm Visualizer (C++)</h5>
-                        <p>C++ project visualizing different sorting algorithms to showcase efficiency and computational speed, built using <strong>SFML/SDL</strong> and optimized <strong>DSA</strong> implementation.</p>
-                        <div class="project-links">
-                            <a href="[LINK_TO_GITHUB_REPO_8]" class="project-link" target="_blank" title="View Code">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                            <a href="[LINK_TO_VIDEO_DEMO_8]" class="project-link live" target="_blank" title="Video Demo">
-                                <i class='bx bxl-youtube'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="row project-card" 
+                data-title="FurEver Home" 
+                data-desc="A cross-platform pet adoption mobile application. Includes secure user authentication, social donation feeds, and an AI-based matching assistant for prospective pet owners." 
+                data-image="./img/fureverhome.png"
+                data-live="https://flutever.netlify.app/" 
+                data-github="https://github.com/rvsr26/FUREVERHOME-FLUTTER"
+                data-tools="Flutter, Dart, Firebase, AI Engine">
+                
+                <div class="layer">
+                    <h5>FurEver Home</h5>
+                    <div class="project-languages">
+                        <span>Flutter</span> <span>Firebase</span> <span>Dart</span>
+                    </div>
+                    <p>Click for full details</p>
+                </div>
+            </div>
+
+            <div class="row project-card" 
+                data-title="OneStore" 
+                data-desc="High-performance e-commerce platform built for speed. Features a dynamic shopping cart, product filtering, and smart recommendation algorithms." 
+                data-image="./img/onestore.png"
+                data-live="https://one-store-green.vercel.app/" 
+                data-github="https://github.com/rvsr26/OneStore"
+                data-tools="Flutter, Node.js, Express, REST API">
+                
+                <div class="layer">
+                    <h5>OneStore</h5>
+                    <div class="project-languages">
+                      <span>Flutter</span> <span>Dart</span> <span>Firebase</span>
+                    </div>
+                    <p>Click for full details</p>
+                </div>
+            </div>
+
+            <div class="row project-card" 
+                data-title="Student Tracker" 
+                data-desc="A gamified academic dashboard that allows students to track CGPA progress, attendance alerts, and personal study goals with persistent LocalStorage data." 
+                data-image="./img/studenttracker.png"
+                data-live="https://studenttrackerap.netlify.app/" 
+                data-github="https://github.com/rvsr26/Student-Tracker"
+                data-tools="Vanilla JS, HTML/CSS, LocalStorage">
+                
+                <div class="layer">
+                    <h5>Student Tracker</h5>
+                    <div class="project-languages">
+                        <span>React.js</span> <span>FireBase</span>   <span>CSS</span>
+                    </div>
+                    <p>Click for full details</p>
+                </div>
+            </div>
+
+            <div id="project-preview" class="project-preview hidden">
+                <span class="close-preview" title="Close Preview">&times;</span>
+                <div class="preview-media">
+                    <img id="preview-img" src="" alt="Project Showroom">
+                </div>
+                <div class="preview-info">
+                    <h3 id="preview-title"></h3>
+                    <div id="preview-tools-container" class="preview-langs"></div>
+                    <p id="preview-desc"></p>
+                    <div class="preview-links">
+                        <a href="#" id="preview-live" target="_blank" class="btn-box">Live Demo</a>
+                        <a href="#" id="preview-github" target="_blank" class="btn-box">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row project-card" 
+                data-title="Defence Radar System" 
+                data-desc="An embedded engineering project simulating target detection and tracking using STM32 bare-metal programming and low-level peripheral optimization." 
+                data-image="./img/drs.png"
+                data-live="#" 
+                data-github="https://github.com/rvsr26/Defence-Radar-System"
+                data-tools="Embedded C, STM32, ARM Architecture">
+                
+                <div class="layer">
+                    <h5>Defence Radar</h5>
+                    <div class="project-languages">
+                        <span>Embedded C</span> <span>STM32</span> <span>Keil μVision</span>
+                    </div>
+                    <p>Click for full details</p>
+                </div>
+            </div>
+
+            <div class="row project-card" 
+                data-title="PixelForge" 
+                data-desc="Advanced CLI-based image processor. Uses mathematical NumPy operations to perform filters, transformations, and object detection without high-level frameworks." 
+                data-image="./img/imagepr.png"
+                data-live="#" 
+                data-github="https://github.com/rvsr26/Image-Processing"
+                data-tools="Python, NumPy, OpenCV, OOP">
+                
+                <div class="layer">
+                    <h5>PixelForge</h5>
+                    <div class="project-languages">
+                        <span>Python</span> <span>NumPy</span>
+                    </div>
+                    <p>Click for full details</p>
+                </div>
+            </div>
+
+            <div class="row project-card" 
+                data-title="Paralog Analytics" 
+                data-desc="A high-throughput log analysis engine designed to handle large datasets using Python multiprocessing and parallel computing techniques for efficient parsing." 
+                data-image="./img/log.png"
+                data-live="#" 
+                data-github="https://github.com/rvsr26/LogSplitter"
+                data-tools="Python, Multiprocessing, Data Scraping">
+                
+                <div class="layer">
+                    <h5>Paralog Analytics</h5>
+                    <div class="project-languages">
+                        <span>Python</span> <span>Multi-proc</span>
+                    </div>
+                    <p>Click for full details</p>
+                </div>
+            </div>
+
+            <a href="https://github.com/rvsr26" target="_blank" class="row view-more-card">
+                <div class="view-more-content">
+                    <i class='bx bxl-github'></i>
+                    <h3>Explore More</h3>
+                    <p>Technical repositories on GitHub</p>
+                    <span class="btn-box">Visit Profile</span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
+    <section class="contacts" id="Contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <div class="contact-list">
+                <li>
+        <i class='bx bxs-send'></i> 
+        <a href="mailto:vsrr2006@gmail.com" style="text-decoration: none; color: inherit;">
+            vsrr2006@gmail.com
+        </a>
+    </li>
+    
+    <li>
+        <i class="bx bxs-phone-call"></i> 
+        <a href="tel:+919390934449" style="text-decoration: none; color: inherit;">
+            +91 93909 34449
+        </a>
+    </li>
+            </div>
+        </div>
 
-
-
-
-
-        <section class="contacts" id="Contact">
-            <div class="contact-text">
-                <h2>Contact <span>Me</span></h2>
-                <h4>Ready to collaborate on your next project?</h4>
-                
-                <div class="contact-list">
-                    <li><i class='bx bxs-send'></i>vsrr2006@gmail.com</li>
-                    <li><i class="bx bxs-phone-call" ></i>9390934449</li>
-                    <li><i class="bx bxs-location-plus"></i>Kanigiri,Andhra Pradesh,India</li>
+        <div class="contact-form">
+            <form id="contact-form">
+                <div class="input-box">
+                    <label for="name" class="sr-only">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
                 </div>
-                
-                <div class="contact-icons">
-                    <a href="https://github.com/rvsr26" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.instagram.com/vishnusathwick26/" target="_blank"><i class="bx bxl-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/vishnusathwick26/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <div class="input-box">
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
                 </div>
-            </div>
+                <div class="input-box" style="grid-column: span 2;">
+                    <label for="subject" class="sr-only">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="input-box" style="grid-column: span 2;">
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message..." required></textarea>
+                </div>
+                <div id="form-status" style="grid-column: span 2; text-align: center; display: none;"></div>
+                <div class="btn-box">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
 
-            <div class="contact-form">
-                <form action="#" method="POST" id="contact-form"> 
-                    
-                    <div class="input-box">
-                        <input type="text" name="name" placeholder="Your Full Name" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" name="email" placeholder="Your Email Address" required>
-                    </div>
-                    
-                    <div class="input-box" style="grid-column: span 2;">
-                        <input type="text" name="subject" placeholder="Project/Message Subject" required>
-                    </div>
-                    
-                    <div class="input-box" style="grid-column: span 2;">
-                        <textarea name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
-                    </div>
-                    
-                    <div id="form-status" style="grid-column: span 2; text-align: center; color: var(--primary-color); display: none; margin-top: -10px;">
-                        <i class='bx bx-check-circle'></i> Message Sent Successfully!
-                    </div>
-                    
-                    <div class="btn-box">
-                        <button type="submit">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        
-        <footer>
-            <div class="last-text">
-                <p>Developed by Vishnu Sathwick <i class='bx bx-copyright' style="color: white;"></i> 2026</p>
-            </div>
-        </footer>
-        
-        <a href="#Home" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+<footer>
+    <div class="last-text"><p>Developed by Vishnu Sathwick © 2026</p></div>
+</footer>
 
-        <script src="./files/script.js"></script>
-    </body> 
+<a href="#Home" class="top" aria-label="Back to Top"><i class='bx bx-up-arrow-alt'></i></a>
+
+<script src="./files/script.js"></script>
+
+</body>
 </html>
